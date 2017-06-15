@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
  s.name		= 'LYTools'
- s.version	= '1.0.0'
- s.summary	= '一组实用工具总结，多为在OC中使用比较方便的工具类，在此用Swift实现'
+ s.version	= '1.0.2'
+ s.summary	= 'LYTools 是一组实用工具总结，多为在OC中使用比较方便的工具类，在此用Swift实现'
  s.homepage	= 'https://github.com/ly92/LYTools'
  s.license	= 'MIT'
  s.platform	= :ios
