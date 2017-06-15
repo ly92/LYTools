@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		082A68791EF215C6004CEB69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A68781EF215C6004CEB69 /* AppDelegate.swift */; };
+		082A687B1EF215C6004CEB69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A687A1EF215C6004CEB69 /* ViewController.swift */; };
+		082A687E1EF215C6004CEB69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082A687C1EF215C6004CEB69 /* Main.storyboard */; };
+		082A68801EF215C6004CEB69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 082A687F1EF215C6004CEB69 /* Assets.xcassets */; };
+		082A68831EF215C6004CEB69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082A68811EF215C6004CEB69 /* LaunchScreen.storyboard */; };
+		082A688E1EF215C6004CEB69 /* LYToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A688D1EF215C6004CEB69 /* LYToolsTests.swift */; };
+		082A68991EF215C6004CEB69 /* LYToolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A68981EF215C6004CEB69 /* LYToolsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		082A688A1EF215C6004CEB69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 082A686D1EF215C6004CEB69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 082A68741EF215C6004CEB69;
+			remoteInfo = LYTools;
+		};
+		082A68951EF215C6004CEB69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 082A686D1EF215C6004CEB69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 082A68741EF215C6004CEB69;
+			remoteInfo = LYTools;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		082A68751EF215C6004CEB69 /* LYTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		082A68781EF215C6004CEB69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		082A687A1EF215C6004CEB69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		082A687D1EF215C6004CEB69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		082A687F1EF215C6004CEB69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		082A68821EF215C6004CEB69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		082A68841EF215C6004CEB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		082A68891EF215C6004CEB69 /* LYToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		082A688D1EF215C6004CEB69 /* LYToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYToolsTests.swift; sourceTree = "<group>"; };
+		082A688F1EF215C6004CEB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		082A68941EF215C6004CEB69 /* LYToolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYToolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		082A68981EF215C6004CEB69 /* LYToolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYToolsUITests.swift; sourceTree = "<group>"; };
+		082A689A1EF215C6004CEB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		082A68721EF215C6004CEB69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		082A68861EF215C6004CEB69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		082A68911EF215C6004CEB69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		082A686C1EF215C6004CEB69 = {
+			isa = PBXGroup;
+			children = (
+				082A68771EF215C6004CEB69 /* LYTools */,
+				082A688C1EF215C6004CEB69 /* LYToolsTests */,
+				082A68971EF215C6004CEB69 /* LYToolsUITests */,
+				082A68761EF215C6004CEB69 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		082A68761EF215C6004CEB69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				082A68751EF215C6004CEB69 /* LYTools.app */,
+				082A68891EF215C6004CEB69 /* LYToolsTests.xctest */,
+				082A68941EF215C6004CEB69 /* LYToolsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		082A68771EF215C6004CEB69 /* LYTools */ = {
+			isa = PBXGroup;
+			children = (
+				082A68781EF215C6004CEB69 /* AppDelegate.swift */,
+				082A687A1EF215C6004CEB69 /* ViewController.swift */,
+				082A687C1EF215C6004CEB69 /* Main.storyboard */,
+				082A687F1EF215C6004CEB69 /* Assets.xcassets */,
+				082A68811EF215C6004CEB69 /* LaunchScreen.storyboard */,
+				082A68841EF215C6004CEB69 /* Info.plist */,
+			);
+			path = LYTools;
+			sourceTree = "<group>";
+		};
+		082A688C1EF215C6004CEB69 /* LYToolsTests */ = {
+			isa = PBXGroup;
+			children = (
+				082A688D1EF215C6004CEB69 /* LYToolsTests.swift */,
+				082A688F1EF215C6004CEB69 /* Info.plist */,
+			);
+			path = LYToolsTests;
+			sourceTree = "<group>";
+		};
+		082A68971EF215C6004CEB69 /* LYToolsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				082A68981EF215C6004CEB69 /* LYToolsUITests.swift */,
+				082A689A1EF215C6004CEB69 /* Info.plist */,
+			);
+			path = LYToolsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		082A68741EF215C6004CEB69 /* LYTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 082A689D1EF215C6004CEB69 /* Build configuration list for PBXNativeTarget "LYTools" */;
+			buildPhases = (
+				082A68711EF215C6004CEB69 /* Sources */,
+				082A68721EF215C6004CEB69 /* Frameworks */,
+				082A68731EF215C6004CEB69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LYTools;
+			productName = LYTools;
+			productReference = 082A68751EF215C6004CEB69 /* LYTools.app */;
+			productType = "com.apple.product-type.application";
+		};
+		082A68881EF215C6004CEB69 /* LYToolsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 082A68A01EF215C6004CEB69 /* Build configuration list for PBXNativeTarget "LYToolsTests" */;
+			buildPhases = (
+				082A68851EF215C6004CEB69 /* Sources */,
+				082A68861EF215C6004CEB69 /* Frameworks */,
+				082A68871EF215C6004CEB69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				082A688B1EF215C6004CEB69 /* PBXTargetDependency */,
+			);
+			name = LYToolsTests;
+			productName = LYToolsTests;
+			productReference = 082A68891EF215C6004CEB69 /* LYToolsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		082A68931EF215C6004CEB69 /* LYToolsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 082A68A31EF215C6004CEB69 /* Build configuration list for PBXNativeTarget "LYToolsUITests" */;
+			buildPhases = (
+				082A68901EF215C6004CEB69 /* Sources */,
+				082A68911EF215C6004CEB69 /* Frameworks */,
+				082A68921EF215C6004CEB69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				082A68961EF215C6004CEB69 /* PBXTargetDependency */,
+			);
+			name = LYToolsUITests;
+			productName = LYToolsUITests;
+			productReference = 082A68941EF215C6004CEB69 /* LYToolsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		082A686D1EF215C6004CEB69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = ly;
+				TargetAttributes = {
+					082A68741EF215C6004CEB69 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6FL788Y979;
+						ProvisioningStyle = Automatic;
+					};
+					082A68881EF215C6004CEB69 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6FL788Y979;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 082A68741EF215C6004CEB69;
+					};
+					082A68931EF215C6004CEB69 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6FL788Y979;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 082A68741EF215C6004CEB69;
+					};
+				};
+			};
+			buildConfigurationList = 082A68701EF215C6004CEB69 /* Build configuration list for PBXProject "LYTools" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 082A686C1EF215C6004CEB69;
+			productRefGroup = 082A68761EF215C6004CEB69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				082A68741EF215C6004CEB69 /* LYTools */,
+				082A68881EF215C6004CEB69 /* LYToolsTests */,
+				082A68931EF215C6004CEB69 /* LYToolsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		082A68731EF215C6004CEB69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				082A68831EF215C6004CEB69 /* LaunchScreen.storyboard in Resources */,
+				082A68801EF215C6004CEB69 /* Assets.xcassets in Resources */,
+				082A687E1EF215C6004CEB69 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		082A68871EF215C6004CEB69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		082A68921EF215C6004CEB69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		082A68711EF215C6004CEB69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				082A687B1EF215C6004CEB69 /* ViewController.swift in Sources */,
+				082A68791EF215C6004CEB69 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		082A68851EF215C6004CEB69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				082A688E1EF215C6004CEB69 /* LYToolsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		082A68901EF215C6004CEB69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				082A68991EF215C6004CEB69 /* LYToolsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		082A688B1EF215C6004CEB69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 082A68741EF215C6004CEB69 /* LYTools */;
+			targetProxy = 082A688A1EF215C6004CEB69 /* PBXContainerItemProxy */;
+		};
+		082A68961EF215C6004CEB69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 082A68741EF215C6004CEB69 /* LYTools */;
+			targetProxy = 082A68951EF215C6004CEB69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		082A687C1EF215C6004CEB69 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				082A687D1EF215C6004CEB69 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		082A68811EF215C6004CEB69 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				082A68821EF215C6004CEB69 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		082A689B1EF215C6004CEB69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		082A689C1EF215C6004CEB69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		082A689E1EF215C6004CEB69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6FL788Y979;
+				INFOPLIST_FILE = LYTools/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ly.LYTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		082A689F1EF215C6004CEB69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6FL788Y979;
+				INFOPLIST_FILE = LYTools/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ly.LYTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		082A68A11EF215C6004CEB69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6FL788Y979;
+				INFOPLIST_FILE = LYToolsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ly.LYToolsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYTools.app/LYTools";
+			};
+			name = Debug;
+		};
+		082A68A21EF215C6004CEB69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6FL788Y979;
+				INFOPLIST_FILE = LYToolsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ly.LYToolsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYTools.app/LYTools";
+			};
+			name = Release;
+		};
+		082A68A41EF215C6004CEB69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6FL788Y979;
+				INFOPLIST_FILE = LYToolsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ly.LYToolsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LYTools;
+			};
+			name = Debug;
+		};
+		082A68A51EF215C6004CEB69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6FL788Y979;
+				INFOPLIST_FILE = LYToolsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ly.LYToolsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LYTools;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		082A68701EF215C6004CEB69 /* Build configuration list for PBXProject "LYTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				082A689B1EF215C6004CEB69 /* Debug */,
+				082A689C1EF215C6004CEB69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		082A689D1EF215C6004CEB69 /* Build configuration list for PBXNativeTarget "LYTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				082A689E1EF215C6004CEB69 /* Debug */,
+				082A689F1EF215C6004CEB69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		082A68A01EF215C6004CEB69 /* Build configuration list for PBXNativeTarget "LYToolsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				082A68A11EF215C6004CEB69 /* Debug */,
+				082A68A21EF215C6004CEB69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		082A68A31EF215C6004CEB69 /* Build configuration list for PBXNativeTarget "LYToolsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				082A68A41EF215C6004CEB69 /* Debug */,
+				082A68A51EF215C6004CEB69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 082A686D1EF215C6004CEB69 /* Project object */;
+}
