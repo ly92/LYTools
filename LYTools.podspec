@@ -8,8 +8,8 @@ Pod::Spec.new do |s|
  s.author	= {'ly92' => '1364757394@qq.com'}
  s.ios.deployment_target = '8.0'
  s.source	= {:git => 'https://github.com/ly92/LYTools.git',:tag => s.version}
- s.source_files = 'LYTools/Tools/*.{swift}'
- s.resources	= 'LYTools/Tools/resource/*.{jpeg,png,xib,nib,bundle}'
+ s.source_files = 'Tools/*.{swift}'
+ s.resources	= 'Tools/resource/*.{jpeg,png,xib,nib,bundle}'
  s.requires_arc = true
  s.frameworks	= 'UIKit'
 end
