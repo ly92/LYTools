@@ -14,6 +14,13 @@
 		082A68831EF215C6004CEB69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082A68811EF215C6004CEB69 /* LaunchScreen.storyboard */; };
 		082A688E1EF215C6004CEB69 /* LYToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A688D1EF215C6004CEB69 /* LYToolsTests.swift */; };
 		082A68991EF215C6004CEB69 /* LYToolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A68981EF215C6004CEB69 /* LYToolsUITests.swift */; };
+		082A68B01EF21EBC004CEB69 /* Date+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A68A91EF21EBC004CEB69 /* Date+Category.swift */; };
+		082A68B11EF21EBC004CEB69 /* LYProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A68AA1EF21EBC004CEB69 /* LYProgressHUD.swift */; };
+		082A68B21EF21EBC004CEB69 /* LYSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A68AB1EF21EBC004CEB69 /* LYSwitch.swift */; };
+		082A68B31EF21EBC004CEB69 /* String+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A68AC1EF21EBC004CEB69 /* String+Category.swift */; };
+		082A68B41EF21EBC004CEB69 /* UIColor+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A68AD1EF21EBC004CEB69 /* UIColor+Category.swift */; };
+		082A68B51EF21EBC004CEB69 /* UILabel+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A68AE1EF21EBC004CEB69 /* UILabel+Category.swift */; };
+		082A68B61EF21EBC004CEB69 /* UIView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A68AF1EF21EBC004CEB69 /* UIView+Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		082A68941EF215C6004CEB69 /* LYToolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYToolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		082A68981EF215C6004CEB69 /* LYToolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYToolsUITests.swift; sourceTree = "<group>"; };
 		082A689A1EF215C6004CEB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		082A68A91EF21EBC004CEB69 /* Date+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Category.swift"; sourceTree = "<group>"; };
+		082A68AA1EF21EBC004CEB69 /* LYProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYProgressHUD.swift; sourceTree = "<group>"; };
+		082A68AB1EF21EBC004CEB69 /* LYSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYSwitch.swift; sourceTree = "<group>"; };
+		082A68AC1EF21EBC004CEB69 /* String+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Category.swift"; sourceTree = "<group>"; };
+		082A68AD1EF21EBC004CEB69 /* UIColor+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Category.swift"; sourceTree = "<group>"; };
+		082A68AE1EF21EBC004CEB69 /* UILabel+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Category.swift"; sourceTree = "<group>"; };
+		082A68AF1EF21EBC004CEB69 /* UIView+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Category.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +111,7 @@
 		082A68771EF215C6004CEB69 /* LYTools */ = {
 			isa = PBXGroup;
 			children = (
+				082A68A81EF21EBC004CEB69 /* Tools */,
 				082A68781EF215C6004CEB69 /* AppDelegate.swift */,
 				082A687A1EF215C6004CEB69 /* ViewController.swift */,
 				082A687C1EF215C6004CEB69 /* Main.storyboard */,
@@ -123,6 +138,28 @@
 				082A689A1EF215C6004CEB69 /* Info.plist */,
 			);
 			path = LYToolsUITests;
+			sourceTree = "<group>";
+		};
+		082A68A81EF21EBC004CEB69 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				082A68B71EF22020004CEB69 /* resource */,
+				082A68A91EF21EBC004CEB69 /* Date+Category.swift */,
+				082A68AA1EF21EBC004CEB69 /* LYProgressHUD.swift */,
+				082A68AB1EF21EBC004CEB69 /* LYSwitch.swift */,
+				082A68AC1EF21EBC004CEB69 /* String+Category.swift */,
+				082A68AD1EF21EBC004CEB69 /* UIColor+Category.swift */,
+				082A68AE1EF21EBC004CEB69 /* UILabel+Category.swift */,
+				082A68AF1EF21EBC004CEB69 /* UIView+Category.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		082A68B71EF22020004CEB69 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +299,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				082A68B51EF21EBC004CEB69 /* UILabel+Category.swift in Sources */,
+				082A68B31EF21EBC004CEB69 /* String+Category.swift in Sources */,
 				082A687B1EF215C6004CEB69 /* ViewController.swift in Sources */,
+				082A68B41EF21EBC004CEB69 /* UIColor+Category.swift in Sources */,
+				082A68B11EF21EBC004CEB69 /* LYProgressHUD.swift in Sources */,
+				082A68B61EF21EBC004CEB69 /* UIView+Category.swift in Sources */,
+				082A68B21EF21EBC004CEB69 /* LYSwitch.swift in Sources */,
 				082A68791EF215C6004CEB69 /* AppDelegate.swift in Sources */,
+				082A68B01EF21EBC004CEB69 /* Date+Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +560,7 @@
 				082A689F1EF215C6004CEB69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		082A68A01EF215C6004CEB69 /* Build configuration list for PBXNativeTarget "LYToolsTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +569,7 @@
 				082A68A21EF215C6004CEB69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		082A68A31EF215C6004CEB69 /* Build configuration list for PBXNativeTarget "LYToolsUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +578,7 @@
 				082A68A51EF215C6004CEB69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
