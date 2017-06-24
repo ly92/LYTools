@@ -1,16 +1,16 @@
 //
 //  LYProgressHUD.swift
-//  ly
+//  LYProgressHUD
 //   _
-//  | |      /\   /\
-//  | |      \ \_/ /
-//  | |       \_~_/
-//  | |        / \
-//  | |__/\    [ ]
+//  |.|      /\   /\
+//  |.|      \ \_/ /
+//  |.|       \_~_/
+//  |.|        /.\
+//  |.|__/\    [.]
 //  |_|__,/    \_/
 //
 //  Created by ly on 16/12/16.
-//  Copyright © 2016年 ly. All rights reserved.
+//  Copyright © 2016年 aoke. All rights reserved.
 //
 
 import UIKit
@@ -66,17 +66,17 @@ public extension LYProgressHUD {
      - parameter successText: 需要显示的文字,默认为 Success!
      - parameter autoRemove:  是否自动移除,默认3秒后自动移除
      */
-    public static func showSuccess(successText: String = "Success!", autoRemove: Bool = true) {
-        LYProgressHUD.showText(type: .success, text: successText, autoRemove: autoRemove)
+    public static func showSuccess(_ success: String = "Success!", autoRemove: Bool = true) {
+        LYProgressHUD.showText(type: .success, text: success, autoRemove: autoRemove)
     }
     /**
      Error样式
      
-     - parameter errorText:  需要显示的文字,默认为 Error!
+     - parameter error:  需要显示的文字,默认为 Error!
      - parameter autoRemove: 是否自动移除,默认3秒后自动移除
      */
-    public static func showError(errorText: String = "Error!", autoRemove: Bool = true) {
-        LYProgressHUD.showText(type: .error, text: errorText, autoRemove: autoRemove)
+    public static func showError(_ error: String = "Error!", autoRemove: Bool = true) {
+        LYProgressHUD.showText(type: .error, text: error, autoRemove: autoRemove)
     }
     /**
      Info样式
@@ -84,7 +84,7 @@ public extension LYProgressHUD {
      - parameter infoText:   需要显示的文字,默认为 Info!
      - parameter autoRemove: 是否自动移除,默认3秒后自动移除
      */
-    public static func showInfo(infoText: String = "info!", autoRemove: Bool = true) {
+    public static func showInfo(_ infoText: String = "info!", autoRemove: Bool = true) {
         LYProgressHUD.showText(type: .info, text: infoText, autoRemove: autoRemove)
     }
     /**

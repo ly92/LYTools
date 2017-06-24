@@ -17,7 +17,7 @@ import UIKit
 
 @objc
 protocol LYSwitchDelegate : NSObjectProtocol{
-    @objc func lySwitchChangeIndex(index:NSInteger)
+    @objc func lySwitchChangeIndex(lySwitch:LYSwitch, index:NSInteger)
 }
 
 class LYSwitch: UIView {
@@ -31,6 +31,7 @@ class LYSwitch: UIView {
     var leftTitle : String{
         didSet{
             self.leftBtn.setTitle(self.leftTitle, for: .normal)
+            self.thumbLbl.text = self.leftTitle
         }
     }
     //右安扭标题颜色
@@ -64,6 +65,7 @@ class LYSwitch: UIView {
         }
     }
     
+    
     let rightBtn = UIButton(type: .custom)
     let leftBtn = UIButton(type: .custom)
     let thumbLbl = UILabel()
@@ -71,9 +73,26 @@ class LYSwitch: UIView {
     var delegate : LYSwitchDelegate?
     
     
+    init(frame:CGRect, tag:Int, delegate: LYSwitchDelegate) {
+        self.rightTitle = "右标题"
+        self.leftTitle = "左标题"
+        self.rightTitleColor = UIColor.white
+        self.leftTitleColor = UIColor.white
+        self.bgColor = UIColor.red
+        self.thumbColor = UIColor.white
+        self.thumbTitleColor = UIColor.red
+        
+        self.delegate = delegate
+        
+        super.init(frame:frame)
+        self.frame = frame
+        self.tag = tag
+        self.setUpleftAndRightBtns()
+    }
+    
     init(frame:CGRect, delegate: LYSwitchDelegate) {
-        self.rightTitle = "客户"
-        self.leftTitle = "工程师"
+        self.rightTitle = "右标题"
+        self.leftTitle = "左标题"
         self.rightTitleColor = UIColor.white
         self.leftTitleColor = UIColor.white
         self.bgColor = UIColor.red
@@ -87,7 +106,7 @@ class LYSwitch: UIView {
         self.setUpleftAndRightBtns()
     }
     
-    
+
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -158,7 +177,7 @@ extension LYSwitch{
         self.thumbLbl.text = self.leftTitle
         UIView.animate(withDuration: 0.3) { 
             self.thumbLbl.frame = CGRect(x:1, y:1, width:self.frame.width/2.0, height:self.frame.height - 2)
-            self.delegate?.lySwitchChangeIndex(index: 1)
+            self.delegate?.lySwitchChangeIndex(lySwitch: self, index: 1)
         }
         
     }
@@ -170,7 +189,7 @@ extension LYSwitch{
         self.thumbLbl.text = self.rightTitle
         UIView.animate(withDuration: 0.3) {
             self.thumbLbl.frame = CGRect(x:self.frame.width/2.0 - 2, y:1, width:self.frame.width/2.0, height:self.frame.height - 2)
-            self.delegate?.lySwitchChangeIndex(index: 2)
+            self.delegate?.lySwitchChangeIndex(lySwitch: self, index: 2)
         }
         
     }
@@ -201,7 +220,7 @@ extension LYSwitch{
                     self.thumbLbl.frame = CGRect(x:self.frame.width/2.0 - 2, y:1, width:self.frame.width/2.0, height:self.frame.height - 2)
                     self.thumbLbl.text = self.rightTitle
                     //代理方法
-                        self.delegate?.lySwitchChangeIndex(index: 2)
+                        self.delegate?.lySwitchChangeIndex(lySwitch: self, index: 2)
                 }else{
                     //滑动未超过thumb的一半
                     self.thumbLbl.frame = CGRect(x:1, y:1, width:self.frame.width/2.0, height:self.frame.height - 2)
@@ -229,7 +248,7 @@ extension LYSwitch{
                     self.thumbLbl.frame = CGRect(x:1, y:1, width:self.frame.width/2.0, height:self.frame.height - 2)
                     self.thumbLbl.text = self.leftTitle
                     //代理方法
-                    self.delegate?.lySwitchChangeIndex(index: 1)
+                    self.delegate?.lySwitchChangeIndex(lySwitch: self, index: 1)
                 }else{
                     //滑动未超过thumb的一半
                     self.thumbLbl.frame = CGRect(x:self.frame.width/2.0 - 2, y:1, width:self.frame.width/2.0, height:self.frame.height - 2)

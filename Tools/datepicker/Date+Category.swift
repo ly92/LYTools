@@ -1,6 +1,13 @@
 //
 //  Date+Category.swift
 //  ly
+//   _
+//  | |      /\   /\
+//  | |      \ \_/ /
+//  | |       \_~_/
+//  | |        / \
+//  | |__/\    [ ]
+//  |_|__,/    \_/
 //
 //  Created by 李勇 on 2017/6/5.
 //  Copyright © 2017年 ly. All rights reserved.
@@ -143,7 +150,7 @@ extension Date{
         let newDate = Date(timeIntervalSinceReferenceDate: aTimeInterval)
         return self.isSameYear(aDate: newDate)
     }
-
+    
     //是否晚于某天
     func isLaterThanDate(aDate : Date) -> Bool {
         return self > aDate
@@ -184,7 +191,7 @@ extension Date{
         let ti = aDate.timeIntervalSince(self)
         return  NSInteger(ti / D_DAY)
     }
-
+    
     //本年
     func year() -> NSInteger {
         let components = calendar.dateComponents(unitFlags, from: self)
@@ -226,12 +233,42 @@ extension Date{
         return components.minute!
     }
     
+    //本年
+    static func currentYear() -> NSInteger {
+        let components = calendar.dateComponents(unitFlags, from: Date())
+        return components.year!
+    }
+    //本月
+    static func currentMonth() -> NSInteger {
+        let components = calendar.dateComponents(unitFlags, from: Date())
+        return components.month!
+    }
+    //本日
+    static func currentDay() -> NSInteger {
+        let components = calendar.dateComponents(unitFlags, from: Date())
+        return components.day!
+    }
+    //当前小时
+    static func currentHour() -> NSInteger {
+        let components = calendar.dateComponents(unitFlags, from: Date())
+        return components.hour!
+    }
+    //当前分钟
+    static func currentMinute() -> NSInteger {
+        let components = calendar.dateComponents(unitFlags, from: Date())
+        return components.minute!
+    }
+    
+    
     //MARK: - String
     static func dayFormatString() -> String {
         return "MM-dd HH:mm"
     }
     static func dateFormatString() -> String {
         return "yyyy-MM-dd"
+    }
+    static func dateChineseFormatString() -> String {
+        return "yyyy年MM月dd日"
     }
     static func shortDateFormatString() -> String {
         return "yyyyMMdd"
@@ -248,11 +285,14 @@ extension Date{
     static func datesFormatString() -> String {
         return "yyyy-MM-dd HH:mm"
     }
+    static func datesPointFormatString() -> String {
+        return "yyyy.MM.dd HH:mm"
+    }
     
     // MARK: timestamp to datestring
     
     //时间戳转换为时间字符串
-    static func timeStampToDateString(format: String, timeStamps: String) -> String {
+    static func dateStringFromDate(format: String, timeStamps: String) -> String {
         if format.isEmpty || timeStamps.isEmpty{
             return ""
         }
@@ -272,16 +312,54 @@ extension Date{
         let dateString = dateFormat.string(from: date)
         return dateString
     }
+    //时间字符串转换为日期
+    static func dateFromDateString(format: String, dateString: String) -> Date {
+        if format.isEmpty || dateString.isEmpty{
+            return Date()
+        }
+        let whiteSpace = CharacterSet.whitespacesAndNewlines
+        if format.trimmingCharacters(in: whiteSpace).isEmpty || dateString.trimmingCharacters(in: whiteSpace).isEmpty{
+            return Date()
+        }
+        if format == "0" || dateString == "0"{
+            return Date()
+        }
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = format
+        let date = dateFormat.date(from: dateString)
+        if date != nil{
+            return date!
+        }
+        return Date()
+    }
     
     //日期转换为10位时间戳
     static func phpTimestamp() -> String {
-        let date = Date.date()
+        let date = Date()
         var interval = date.timeIntervalSince1970
         if interval > 140000000000{
             interval = interval / 1000
         }
         let ts = String(format:"%0.f",interval)
         return ts
+    }
+    
+    static func dayCountInYearAndMonth(year:NSInteger, month:NSInteger) -> Int{
+        switch month {
+        case 1,3,5,7,8,10,12:
+            return 31
+        case 4,6,9,11:
+            return 30
+        case 2:
+            if year % 400 == 0 || (year % 100 != 0 && year % 4 == 0){
+                return 29
+            }else{
+                return 28
+            }
+        default:
+            return 0
+        }
+        
     }
 }
 
