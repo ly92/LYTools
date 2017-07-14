@@ -44,7 +44,7 @@ class LYAlertView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.black.withAlphaComponent(0.3)
-        self.addTapActionBlock { 
+        self.addTapActionBlock {
             if (self.dismissblock != nil){
                 self.dismissblock!()
             }
@@ -114,20 +114,20 @@ class LYAlertView: UIView {
             return
         }else if !cancelButtonTitle.isEmpty && !otherButtonTitle.isEmpty {
             //两个按钮
-            let leftBtnFrame = CGRect(x:(KAlertWidth - 2 * kCoupleButtonWidth - kButtonBottomOffset) * 0.5, y:KAlertHeight - kButtonBottomOffset - kButtonHeight, width:kCoupleButtonWidth, height:kButtonHeight);
-            let rightBtnFrame = CGRect(x:leftBtnFrame.maxX + kButtonBottomOffset, y:KAlertHeight - kButtonBottomOffset - kButtonHeight, width:kCoupleButtonWidth, height:kButtonHeight);
+            let leftBtnFrame = CGRect(x:(KAlertWidth - 2 * kCoupleButtonWidth - kButtonBottomOffset) * 0.5, y:KAlertHeight - kButtonBottomOffset/2.0 - kButtonHeight, width:kCoupleButtonWidth, height:kButtonHeight);
+            let rightBtnFrame = CGRect(x:leftBtnFrame.maxX + kButtonBottomOffset, y:KAlertHeight - kButtonBottomOffset/2.0 - kButtonHeight, width:kCoupleButtonWidth, height:kButtonHeight);
             leftBtn = UIButton(frame:leftBtnFrame);
-//            leftBtn?.setBackgroundImage(UIImage(named: "button_white_normal"), for: UIControlState.normal)
-//            leftBtn?.setBackgroundImage(UIImage(named: "button_white_clicked"), for: UIControlState.selected)
-            leftBtn!.setTitle(cancelButtonTitle as String, for: UIControlState.normal)
-            leftBtn!.titleLabel!.font = UIFont.boldSystemFont(ofSize: 14)
-            leftBtn!.setTitleColor(UIColor.lightGray,for:UIControlState.normal)
-            leftBtn!.addTarget(self, action: #selector(LYAlertView.leftBtnClicked), for: UIControlEvents.touchUpInside)
-            leftBtn!.layer.masksToBounds = true
-            backImageView?.addSubview(leftBtn!)
-            leftBtn!.layer.masksToBounds = true
-            leftBtn!.layer.cornerRadius = 3.0
             rightBtn = UIButton(frame:rightBtnFrame)
+            
+            //        rightBtn!.setBackgroundImage( UIImage(named: "button_orange_normal") ,for:UIControlState.normal)
+            //        rightBtn!.setBackgroundImage( UIImage(named: "button_orange_click") ,for:UIControlState.selected)
+            rightBtn!.setTitle(otherButtonTitle as String, for: UIControlState.normal)
+            rightBtn!.titleLabel!.font = UIFont.boldSystemFont(ofSize: 14)
+            rightBtn!.setTitleColor(UIColor.RGBS(s: 33),for:UIControlState.normal)
+            rightBtn!.addTarget(self, action: #selector(LYAlertView.rightBtnClicked), for: UIControlEvents.touchUpInside)
+            rightBtn!.layer.masksToBounds = true
+            rightBtn!.layer.cornerRadius = 3.0
+            backImageView?.addSubview(rightBtn!)
             
             //按钮上面的线
             let topLine = UIView.init(frame: CGRect(x:0, y:KAlertHeight - kButtonBottomOffset - kButtonHeight, width:KAlertWidth, height:1.5))
@@ -146,20 +146,19 @@ class LYAlertView: UIView {
             topLine.backgroundColor = UIColor.RGBS(s: 240)
             backImageView?.addSubview(topLine)
             //一个按钮
-            rightBtn = UIButton(frame:CGRect(x:(KAlertWidth-KSingleButtonWidth)/2, y:KAlertHeight - kButtonBottomOffset - kButtonHeight, width:KSingleButtonWidth, height:kButtonHeight))
+            leftBtn = UIButton(frame:CGRect(x:(KAlertWidth-KSingleButtonWidth)/2, y:KAlertHeight - kButtonBottomOffset/2.0 - kButtonHeight, width:KSingleButtonWidth, height:kButtonHeight))
         }
         
-//        rightBtn!.setBackgroundImage( UIImage(named: "button_orange_normal") ,for:UIControlState.normal)
-//        rightBtn!.setBackgroundImage( UIImage(named: "button_orange_click") ,for:UIControlState.selected)
-        rightBtn!.setTitle(otherButtonTitle as String, for: UIControlState.normal)
-        rightBtn!.titleLabel!.font = UIFont.boldSystemFont(ofSize: 14)
-        rightBtn!.setTitleColor(UIColor.RGBS(s: 33),for:UIControlState.normal)
-        rightBtn!.addTarget(self, action: #selector(LYAlertView.rightBtnClicked), for: UIControlEvents.touchUpInside)
-        rightBtn!.layer.masksToBounds = true
-        rightBtn!.layer.cornerRadius = 3.0
-        backImageView?.addSubview(rightBtn!)
-        
-        
+        //            leftBtn?.setBackgroundImage(UIImage(named: "button_white_normal"), for: UIControlState.normal)
+        //            leftBtn?.setBackgroundImage(UIImage(named: "button_white_clicked"), for: UIControlState.selected)
+        leftBtn!.setTitle(cancelButtonTitle as String, for: UIControlState.normal)
+        leftBtn!.titleLabel!.font = UIFont.boldSystemFont(ofSize: 14)
+        leftBtn!.setTitleColor(UIColor.RGBS(s: 33),for:UIControlState.normal)
+        leftBtn!.addTarget(self, action: #selector(LYAlertView.leftBtnClicked), for: UIControlEvents.touchUpInside)
+        leftBtn!.layer.masksToBounds = true
+        backImageView?.addSubview(leftBtn!)
+        leftBtn!.layer.masksToBounds = true
+        leftBtn!.layer.cornerRadius = 3.0
     }
     
     func leftBtnClicked(){
@@ -176,7 +175,8 @@ class LYAlertView: UIView {
         self.dismiss()
     }
     //MARK: - 显示
-    class func show( _ title:String, _ message:String, _ leftTitle:String, _ rightTitle:String, rightClick:rightBlock? = nil, leftClick:leftBlock? = nil,dismissBlock:DelaydismissBlock? = nil)->Void{
+    //2个按钮
+    class func show( _ title:String, _ message:String, _ leftTitle:String, _ rightTitle:String, _ rightClick:rightBlock? = nil, _ leftClick:leftBlock? = nil, _ dismissBlock:DelaydismissBlock? = nil)->Void{
         let alert = LYAlertView.init(frame: CGRect(x:0, y:0, width:UIScreen.main.bounds.width, height:UIScreen.main.bounds.height))
         alert.initTwoBtn(title: title, message: message, cancelButtonTitle: leftTitle, otherButtonTitle: rightTitle)
         alert.occur(animation: true)
@@ -185,31 +185,16 @@ class LYAlertView: UIView {
         alert.rightblock = rightClick
         alert.dismissblock = dismissBlock
     }
-    class func show( _ title:String, _ message:String, _ leftTitle:String, _ rightTitle:String,_ animation:Bool = true, _ rightClick:rightBlock? = nil, _ leftClick:leftBlock? = nil)->Void{
-        let alert = LYAlertView.init(frame: CGRect(x:0, y:0, width:UIScreen.main.bounds.width, height:UIScreen.main.bounds.height))
-        alert.initTwoBtn(title: title, message: message, cancelButtonTitle: leftTitle, otherButtonTitle: rightTitle)
-        alert.occur(animation: animation)
-        
-        alert.leftblock = leftClick
-        alert.rightblock = rightClick
-    }
-    class func show( _ title:String, _ message:String, _ leftTitle:String, _ rightTitle:String, _ rightClick:rightBlock?, _ leftClick:leftBlock? = nil)->Void{
-        let alert = LYAlertView.init(frame: CGRect(x:0, y:0, width:UIScreen.main.bounds.width, height:UIScreen.main.bounds.height))
-        alert.initTwoBtn(title: title, message: message, cancelButtonTitle: leftTitle, otherButtonTitle: rightTitle)
-        alert.occur(animation: true)
-        
-        alert.leftblock = leftClick
-        alert.rightblock = rightClick
-    }
-    class func show( _ title:String, _ message:String, _ leftTitle:String, _ rightTitle:String, _ rightClick:rightBlock? = nil)->Void{
-        let alert = LYAlertView.init(frame: CGRect(x:0, y:0, width:UIScreen.main.bounds.width, height:UIScreen.main.bounds.height))
-        alert.initTwoBtn(title: title, message: message, cancelButtonTitle: leftTitle, otherButtonTitle: rightTitle)
-        alert.occur(animation: true)
-        
-        alert.leftblock = nil
-        alert.rightblock = rightClick
+    
+    //1个按钮
+    class func show( _ title:String, _ message:String, _ leftTitle:String, _ leftClick:leftBlock? = nil, _ dismissBlock:DelaydismissBlock? = nil)->Void{
+        self.show(title, message, leftTitle, "", nil, leftClick, dismissBlock)
     }
     
+    //0个按钮
+    class func show( _ title:String, _ message:String, _ dismissBlock:DelaydismissBlock? = nil)->Void{
+        self.show(title, message, "", "", nil, nil, dismissBlock)
+    }
     
     func occur(animation:Bool) -> Void{
         
