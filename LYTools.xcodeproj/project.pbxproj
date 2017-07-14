@@ -16,6 +16,12 @@
 		082A68991EF215C6004CEB69 /* LYToolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A68981EF215C6004CEB69 /* LYToolsUITests.swift */; };
 		083DCFC11F1869180009081D /* LYAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083DCFC01F1869180009081D /* LYAlertView.swift */; };
 		083DCFC31F18692E0009081D /* LYPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083DCFC21F18692E0009081D /* LYPickerView.swift */; };
+		083DCFC51F186E490009081D /* StarLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083DCFC41F186E490009081D /* StarLevelView.swift */; };
+		083DCFC71F186E520009081D /* LYPhotoBrowseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083DCFC61F186E520009081D /* LYPhotoBrowseCell.xib */; };
+		083DCFCC1F186E590009081D /* LYPhotoBrowseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083DCFC81F186E590009081D /* LYPhotoBrowseCell.swift */; };
+		083DCFCD1F186E590009081D /* LYPhotoBrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083DCFC91F186E590009081D /* LYPhotoBrowseView.swift */; };
+		083DCFCE1F186E590009081D /* LYPhotoBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083DCFCA1F186E590009081D /* LYPhotoBrowseViewController.swift */; };
+		083DCFCF1F186E590009081D /* LYPhotoPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083DCFCB1F186E590009081D /* LYPhotoPreviewCell.swift */; };
 		085218CE1EFED5F20010E992 /* icon1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 085218CC1EFED5F20010E992 /* icon1.jpeg */; };
 		085218CF1EFED5F20010E992 /* icon2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 085218CD1EFED5F20010E992 /* icon2.jpeg */; };
 		085218D81EFED5FE0010E992 /* LYProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085218D11EFED5FE0010E992 /* LYProgressHUD.swift */; };
@@ -62,6 +68,12 @@
 		082A689A1EF215C6004CEB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		083DCFC01F1869180009081D /* LYAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LYAlertView.swift; path = Tools/LYAlertView.swift; sourceTree = SOURCE_ROOT; };
 		083DCFC21F18692E0009081D /* LYPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LYPickerView.swift; path = Tools/LYPickerView.swift; sourceTree = SOURCE_ROOT; };
+		083DCFC41F186E490009081D /* StarLevelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarLevelView.swift; path = Tools/StarLevelView.swift; sourceTree = SOURCE_ROOT; };
+		083DCFC61F186E520009081D /* LYPhotoBrowseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LYPhotoBrowseCell.xib; path = Tools/resource/LYPhotoBrowseCell.xib; sourceTree = SOURCE_ROOT; };
+		083DCFC81F186E590009081D /* LYPhotoBrowseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LYPhotoBrowseCell.swift; path = Tools/LYPhotoBrowseCell.swift; sourceTree = SOURCE_ROOT; };
+		083DCFC91F186E590009081D /* LYPhotoBrowseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LYPhotoBrowseView.swift; path = Tools/LYPhotoBrowseView.swift; sourceTree = SOURCE_ROOT; };
+		083DCFCA1F186E590009081D /* LYPhotoBrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LYPhotoBrowseViewController.swift; path = Tools/LYPhotoBrowseViewController.swift; sourceTree = SOURCE_ROOT; };
+		083DCFCB1F186E590009081D /* LYPhotoPreviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LYPhotoPreviewCell.swift; path = Tools/LYPhotoPreviewCell.swift; sourceTree = SOURCE_ROOT; };
 		085218CC1EFED5F20010E992 /* icon1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon1.jpeg; path = Tools/resource/icon1.jpeg; sourceTree = SOURCE_ROOT; };
 		085218CD1EFED5F20010E992 /* icon2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon2.jpeg; path = Tools/resource/icon2.jpeg; sourceTree = SOURCE_ROOT; };
 		085218D11EFED5FE0010E992 /* LYProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LYProgressHUD.swift; path = Tools/LYProgressHUD.swift; sourceTree = SOURCE_ROOT; };
@@ -155,6 +167,11 @@
 		082A68A81EF21EBC004CEB69 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				083DCFC81F186E590009081D /* LYPhotoBrowseCell.swift */,
+				083DCFC91F186E590009081D /* LYPhotoBrowseView.swift */,
+				083DCFCA1F186E590009081D /* LYPhotoBrowseViewController.swift */,
+				083DCFCB1F186E590009081D /* LYPhotoPreviewCell.swift */,
+				083DCFC41F186E490009081D /* StarLevelView.swift */,
 				083DCFC21F18692E0009081D /* LYPickerView.swift */,
 				083DCFC01F1869180009081D /* LYAlertView.swift */,
 				085218E51EFED8F80010E992 /* Date+Category.swift */,
@@ -174,6 +191,7 @@
 		082A68B71EF22020004CEB69 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				083DCFC61F186E520009081D /* LYPhotoBrowseCell.xib */,
 				085218CC1EFED5F20010E992 /* icon1.jpeg */,
 				085218CD1EFED5F20010E992 /* icon2.jpeg */,
 			);
@@ -291,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				085218CE1EFED5F20010E992 /* icon1.jpeg in Resources */,
+				083DCFC71F186E520009081D /* LYPhotoBrowseCell.xib in Resources */,
 				082A68831EF215C6004CEB69 /* LaunchScreen.storyboard in Resources */,
 				082A68801EF215C6004CEB69 /* Assets.xcassets in Resources */,
 				082A687E1EF215C6004CEB69 /* Main.storyboard in Resources */,
@@ -324,13 +343,18 @@
 				085218DA1EFED5FE0010E992 /* String+Category.swift in Sources */,
 				083DCFC31F18692E0009081D /* LYPickerView.swift in Sources */,
 				085218E81EFED8F80010E992 /* LYDatePicker.swift in Sources */,
+				083DCFCC1F186E590009081D /* LYPhotoBrowseCell.swift in Sources */,
+				083DCFCF1F186E590009081D /* LYPhotoPreviewCell.swift in Sources */,
 				083DCFC11F1869180009081D /* LYAlertView.swift in Sources */,
+				083DCFCE1F186E590009081D /* LYPhotoBrowseViewController.swift in Sources */,
 				082A687B1EF215C6004CEB69 /* ViewController.swift in Sources */,
 				085218DB1EFED5FE0010E992 /* UIColor+Category.swift in Sources */,
 				085218D81EFED5FE0010E992 /* LYProgressHUD.swift in Sources */,
 				085218E41EFED6670010E992 /* LYBannerView.swift in Sources */,
 				085218DD1EFED5FE0010E992 /* UIView+Category.swift in Sources */,
+				083DCFC51F186E490009081D /* StarLevelView.swift in Sources */,
 				085218D91EFED5FE0010E992 /* LYSwitch.swift in Sources */,
+				083DCFCD1F186E590009081D /* LYPhotoBrowseView.swift in Sources */,
 				082A68791EF215C6004CEB69 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
