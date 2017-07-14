@@ -6,3 +6,13 @@
 pod 'LYTools'
 
 pod 'LYTools', '~>1.0.1'
+
+
+
+1.LYPickerView
+2.LYAlertView
+3.LYDatePicker:http://www.jianshu.com/p/6c283b4ce532
+4.LYBannerView
+5.LYProgressHUD
+6.LYSwitch
+7.LYPhotoBrowseViewController
