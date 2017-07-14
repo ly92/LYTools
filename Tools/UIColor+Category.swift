@@ -16,6 +16,7 @@
 import Foundation
 import UIKit
 
+
 extension UIColor{
     //颜色
     class func RGB(r:CGFloat, g:CGFloat, b:CGFloat) -> UIColor{
@@ -71,5 +72,5 @@ extension UIColor{
         
         return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: alpha)
     }
-
+    
 }

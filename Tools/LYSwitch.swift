@@ -9,7 +9,7 @@
 //  | |__/\    [ ]
 //  |_|__,/    \_/
 //
-//  Created by ly on 2017/6/13.
+//  Created by 李勇 on 2017/6/13.
 //  Copyright © 2017年 ly. All rights reserved.
 //
 
@@ -21,6 +21,12 @@ protocol LYSwitchDelegate : NSObjectProtocol{
 }
 
 class LYSwitch: UIView {
+    
+    
+    typealias LYSwitchBlock = (LYSwitch,NSInteger) -> Void
+    var ly_SwitchBlock : LYSwitchBlock?
+    
+    
     //右按钮名称
     var rightTitle : String {
         didSet{
@@ -106,7 +112,7 @@ class LYSwitch: UIView {
         self.setUpleftAndRightBtns()
     }
     
-
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -175,9 +181,12 @@ extension LYSwitch{
             return;
         }
         self.thumbLbl.text = self.leftTitle
-        UIView.animate(withDuration: 0.3) { 
+        UIView.animate(withDuration: 0.3) {
             self.thumbLbl.frame = CGRect(x:1, y:1, width:self.frame.width/2.0, height:self.frame.height - 2)
             self.delegate?.lySwitchChangeIndex(lySwitch: self, index: 1)
+            if (self.ly_SwitchBlock != nil){
+                self.ly_SwitchBlock!(self,1)
+            }
         }
         
     }
@@ -190,6 +199,9 @@ extension LYSwitch{
         UIView.animate(withDuration: 0.3) {
             self.thumbLbl.frame = CGRect(x:self.frame.width/2.0 - 2, y:1, width:self.frame.width/2.0, height:self.frame.height - 2)
             self.delegate?.lySwitchChangeIndex(lySwitch: self, index: 2)
+            if (self.ly_SwitchBlock != nil){
+                self.ly_SwitchBlock!(self,2)
+            }
         }
         
     }
@@ -220,7 +232,10 @@ extension LYSwitch{
                     self.thumbLbl.frame = CGRect(x:self.frame.width/2.0 - 2, y:1, width:self.frame.width/2.0, height:self.frame.height - 2)
                     self.thumbLbl.text = self.rightTitle
                     //代理方法
-                        self.delegate?.lySwitchChangeIndex(lySwitch: self, index: 2)
+                    self.delegate?.lySwitchChangeIndex(lySwitch: self, index: 2)
+                    if (self.ly_SwitchBlock != nil){
+                        self.ly_SwitchBlock!(self,2)
+                    }
                 }else{
                     //滑动未超过thumb的一半
                     self.thumbLbl.frame = CGRect(x:1, y:1, width:self.frame.width/2.0, height:self.frame.height - 2)
@@ -249,6 +264,9 @@ extension LYSwitch{
                     self.thumbLbl.text = self.leftTitle
                     //代理方法
                     self.delegate?.lySwitchChangeIndex(lySwitch: self, index: 1)
+                    if (self.ly_SwitchBlock != nil){
+                        self.ly_SwitchBlock!(self,1)
+                    }
                 }else{
                     //滑动未超过thumb的一半
                     self.thumbLbl.frame = CGRect(x:self.frame.width/2.0 - 2, y:1, width:self.frame.width/2.0, height:self.frame.height - 2)

@@ -34,7 +34,7 @@ class LYBannerView: UIView {
             self.pageControl.pageIndicatorTintColor = normalColor
         }
     }
-    var showPageControl : Bool{//
+    var showPageControl : Bool{//是否显示页码控制器
         didSet{
             if !showPageControl {
                 self.pageControl.isHidden = true
@@ -54,7 +54,14 @@ class LYBannerView: UIView {
             self.setUpSubviews()
         }
     }
+    var imgUrlArray : Array<String>{//显示图片的地址后期赋值
+        didSet{
+            self.isUrl = true
+            self.setUpSubviews()
+        }
+    }
     
+    fileprivate var isUrl : Bool//是否通过url加载图片
     
     fileprivate let isHorizontalScroll : Bool//是否为横向滚动
     fileprivate var imgArray : Array<UIImage>//显示的图片
@@ -84,6 +91,8 @@ class LYBannerView: UIView {
         self.isAutoScrolling = true
         self.customerTitleArray = Array()
         self.customerImgArray = Array()
+        self.imgUrlArray = Array()
+        self.isUrl = false
         
         super.init(frame:frame)
         self.frame = frame
@@ -109,6 +118,8 @@ class LYBannerView: UIView {
         self.isAutoScrolling = true
         self.customerTitleArray = Array()
         self.customerImgArray = Array()
+        self.imgUrlArray = Array()
+        self.isUrl = false
         
         super.init(frame:frame)
         self.frame = frame
@@ -131,13 +142,15 @@ class LYBannerView: UIView {
         self.imgArray = Array()
         self.customerTitleArray = Array()
         self.customerImgArray = Array()
+        self.imgUrlArray = Array()
+        self.isUrl = false
         
         super.init(frame:frame)
         self.frame = frame
         
         self.setUpSubviews()
     }
-
+    
     
 }
 
@@ -145,20 +158,40 @@ extension LYBannerView{
     func setUpSubviews() {
         self.imgIndex = 0
         
-        //1.图片至少为2张
-        if self.imgArray.count == 0{
-            let img = UIImage()
-            self.imgArray.insert(img, at: 0)
-            self.imgArray.insert(img, at: 1)
-            self.scrollView.isScrollEnabled = false
-        }else if self.imgArray.count == 1{
-            self.imgArray.insert(self.imgArray[0], at: 1)
-            self.scrollView.isScrollEnabled = false
-        }else{
-            self.scrollView.isScrollEnabled = true
+        if self.isUrl{
+            //1.图片至少为2张
+            if self.imgUrlArray.count == 0{
+                let imgUrl = "http://www.7xiaofu.com/UPLOAD/sys/2017-03-07/~UPLOAD~sys~2017-03-07@1488850751.jpg"
+                self.imgUrlArray.insert(imgUrl, at: 0)
+                self.imgUrlArray.insert(imgUrl, at: 1)
+                self.scrollView.isScrollEnabled = false
+            }else if self.imgUrlArray.count == 1{
+                self.imgUrlArray.insert(self.imgUrlArray[0], at: 1)
+                self.scrollView.isScrollEnabled = false
+            }else{
+                self.scrollView.isScrollEnabled = true
+                
+                //4.定时器
+                self.setUpTimer()
+            }
             
-            //4.定时器
-            self.setUpTimer()
+        }else{
+            //1.图片至少为2张
+            if self.imgArray.count == 0{
+                let img = UIImage()
+                self.imgArray.insert(img, at: 0)
+                self.imgArray.insert(img, at: 1)
+                self.scrollView.isScrollEnabled = false
+            }else if self.imgArray.count == 1{
+                self.imgArray.insert(self.imgArray[0], at: 1)
+                self.scrollView.isScrollEnabled = false
+            }else{
+                self.scrollView.isScrollEnabled = true
+                
+                //4.定时器
+                self.setUpTimer()
+            }
+            
         }
         
         //2.设置scroll
@@ -215,15 +248,46 @@ extension LYBannerView{
     
     /**重新排布ScrollView中的ImageView*/
     func reSetUpImageViewOfScrollView() {
-        
-        if self.imgIndex >= self.imgArray.count{
-            self.imgIndex = 0
-        }else if self.imgIndex < 0{
-            self.imgIndex = self.imgArray.count - 1
-        }
-        
-        self.pageControl.currentPage = self.imgIndex
-        
+        if self.isUrl{
+            if self.imgIndex >= self.imgUrlArray.count{
+                self.imgIndex = 0
+            }else if self.imgIndex < 0{
+                self.imgIndex = self.imgUrlArray.count - 1
+            }
+            
+            self.pageControl.currentPage = self.imgIndex
+            
+            /**
+             下面的代码需要“Kingfisher”的支持才能正常使用“pod 'Kingfisher'#图片处理 http://www.jianshu.com/p/fa2624ac1959”
+             */
+//            self.imgV2.kf.setImage(with: URL(string:self.imgUrlArray[self.imgIndex]),placeholder:#imageLiteral(resourceName: "banner1"))
+//            if self.imgIndex == 0{
+//                self.imgV1.kf.setImage(with: URL(string:self.imgUrlArray[self.imgUrlArray.count - 1]),placeholder:#imageLiteral(resourceName: "banner1"))
+//                self.imgV3.kf.setImage(with: URL(string:self.imgUrlArray[self.imgIndex + 1]),placeholder:#imageLiteral(resourceName: "banner1"))
+//            }else if self.imgIndex == self.imgUrlArray.count - 1{
+//                self.imgV1.kf.setImage(with: URL(string:self.imgUrlArray[self.imgIndex - 1]),placeholder:#imageLiteral(resourceName: "banner1"))
+//                self.imgV3.kf.setImage(with: URL(string:self.imgUrlArray[0]))
+//            }else{
+//                self.imgV1.kf.setImage(with: URL(string:self.imgUrlArray[self.imgIndex - 1]),placeholder:#imageLiteral(resourceName: "banner1"))
+//                self.imgV3.kf.setImage(with: URL(string:self.imgUrlArray[self.imgIndex + 1]),placeholder:#imageLiteral(resourceName: "banner1"))
+//            }
+            
+            
+            if self.isHorizontalScroll{
+                self.scrollView.setContentOffset(CGPoint(x:self.frame.width, y:0), animated: false)
+            }else{
+                self.scrollView.setContentOffset(CGPoint(x:0, y:self.frame.height), animated: false)
+            }
+            
+        }else{
+            if self.imgIndex >= self.imgArray.count{
+                self.imgIndex = 0
+            }else if self.imgIndex < 0{
+                self.imgIndex = self.imgArray.count - 1
+            }
+            
+            self.pageControl.currentPage = self.imgIndex
+            
             self.imgV2.image = self.imgArray[self.imgIndex]
             if self.imgIndex == 0{
                 self.imgV1.image = self.imgArray[self.imgArray.count - 1];
@@ -236,11 +300,13 @@ extension LYBannerView{
                 self.imgV3.image = self.imgArray[self.imgIndex + 1]
             }
             
-        
-        if self.isHorizontalScroll{
-            self.scrollView.setContentOffset(CGPoint(x:self.frame.width, y:0), animated: false)
-        }else{
-            self.scrollView.setContentOffset(CGPoint(x:0, y:self.frame.height), animated: false)
+            
+            if self.isHorizontalScroll{
+                self.scrollView.setContentOffset(CGPoint(x:self.frame.width, y:0), animated: false)
+            }else{
+                self.scrollView.setContentOffset(CGPoint(x:0, y:self.frame.height), animated: false)
+            }
+            
         }
         
     }
@@ -250,12 +316,12 @@ extension LYBannerView{
     func setUpPageControl() {
         
         if !self.showPageControl{
-        return
+            return
         }
         
         self.pageControl.frame = CGRect(x:0, y:self.frame.height - 20, width:self.frame.width, height:20)
         self.pageControl.backgroundColor = UIColor.clear
-        self.pageControl.numberOfPages = self.imgArray.count
+        self.pageControl.numberOfPages = self.isUrl ? self.imgUrlArray.count : self.imgArray.count
         self.pageControl.currentPageIndicatorTintColor = self.currentColor
         self.pageControl.pageIndicatorTintColor = self.normalColor
         self.pageControl.currentPage = 0

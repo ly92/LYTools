@@ -15,9 +15,6 @@
 
 import UIKit
 
-let kScreenW = UIScreen.main.bounds.width
-let kScreenH = UIScreen.main.bounds.height
-
 @objc
 protocol LYDatePickerDelete : NSObjectProtocol{
     @objc func ly_datePickerChoosedTime(date:Date)
@@ -94,6 +91,8 @@ class LYDatePicker: UIControl {
     init(component:Int) {
         if component > 5{
             self.component = 5
+        }else if component < 1{
+            self.component = 1
         }else{
             self.component = component
         }
@@ -177,6 +176,11 @@ extension LYDatePicker{
             self.delegate?.ly_datePickerChoosedTime(date: self.date)
         }
         
+        UIView.animate(withDuration: 0.25, animations: {
+            self.subView.y = kScreenH
+        }){(completion) in
+            self.removeFromSuperview()
+        }
     }
     
     

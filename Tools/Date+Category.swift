@@ -270,6 +270,9 @@ extension Date{
     static func dateChineseFormatString() -> String {
         return "yyyy年MM月dd日"
     }
+    static func datesChineseFormatString() -> String {
+        return "yyyy年MM月dd日HH时"
+    }
     static func shortDateFormatString() -> String {
         return "yyyyMMdd"
     }
@@ -337,6 +340,16 @@ extension Date{
     static func phpTimestamp() -> String {
         let date = Date()
         var interval = date.timeIntervalSince1970
+        if interval > 140000000000{
+            interval = interval / 1000
+        }
+        let ts = String(format:"%0.f",interval)
+        return ts
+    }
+    
+    //日期转换为10位时间戳
+    func phpTimestamp() -> String {
+        var interval = self.timeIntervalSince1970
         if interval > 140000000000{
             interval = interval / 1000
         }

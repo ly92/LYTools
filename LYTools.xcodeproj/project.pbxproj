@@ -14,6 +14,8 @@
 		082A68831EF215C6004CEB69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082A68811EF215C6004CEB69 /* LaunchScreen.storyboard */; };
 		082A688E1EF215C6004CEB69 /* LYToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A688D1EF215C6004CEB69 /* LYToolsTests.swift */; };
 		082A68991EF215C6004CEB69 /* LYToolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A68981EF215C6004CEB69 /* LYToolsUITests.swift */; };
+		083DCFC11F1869180009081D /* LYAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083DCFC01F1869180009081D /* LYAlertView.swift */; };
+		083DCFC31F18692E0009081D /* LYPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083DCFC21F18692E0009081D /* LYPickerView.swift */; };
 		085218CE1EFED5F20010E992 /* icon1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 085218CC1EFED5F20010E992 /* icon1.jpeg */; };
 		085218CF1EFED5F20010E992 /* icon2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 085218CD1EFED5F20010E992 /* icon2.jpeg */; };
 		085218D81EFED5FE0010E992 /* LYProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085218D11EFED5FE0010E992 /* LYProgressHUD.swift */; };
@@ -58,6 +60,8 @@
 		082A68941EF215C6004CEB69 /* LYToolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYToolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		082A68981EF215C6004CEB69 /* LYToolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYToolsUITests.swift; sourceTree = "<group>"; };
 		082A689A1EF215C6004CEB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		083DCFC01F1869180009081D /* LYAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LYAlertView.swift; path = Tools/LYAlertView.swift; sourceTree = SOURCE_ROOT; };
+		083DCFC21F18692E0009081D /* LYPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LYPickerView.swift; path = Tools/LYPickerView.swift; sourceTree = SOURCE_ROOT; };
 		085218CC1EFED5F20010E992 /* icon1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon1.jpeg; path = Tools/resource/icon1.jpeg; sourceTree = SOURCE_ROOT; };
 		085218CD1EFED5F20010E992 /* icon2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon2.jpeg; path = Tools/resource/icon2.jpeg; sourceTree = SOURCE_ROOT; };
 		085218D11EFED5FE0010E992 /* LYProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LYProgressHUD.swift; path = Tools/LYProgressHUD.swift; sourceTree = SOURCE_ROOT; };
@@ -151,6 +155,8 @@
 		082A68A81EF21EBC004CEB69 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				083DCFC21F18692E0009081D /* LYPickerView.swift */,
+				083DCFC01F1869180009081D /* LYAlertView.swift */,
 				085218E51EFED8F80010E992 /* Date+Category.swift */,
 				085218E61EFED8F80010E992 /* LYDatePicker.swift */,
 				085218E11EFED6670010E992 /* LYBannerView.swift */,
@@ -316,7 +322,9 @@
 				085218DC1EFED5FE0010E992 /* UILabel+Category.swift in Sources */,
 				085218E71EFED8F80010E992 /* Date+Category.swift in Sources */,
 				085218DA1EFED5FE0010E992 /* String+Category.swift in Sources */,
+				083DCFC31F18692E0009081D /* LYPickerView.swift in Sources */,
 				085218E81EFED8F80010E992 /* LYDatePicker.swift in Sources */,
+				083DCFC11F1869180009081D /* LYAlertView.swift in Sources */,
 				082A687B1EF215C6004CEB69 /* ViewController.swift in Sources */,
 				085218DB1EFED5FE0010E992 /* UIColor+Category.swift in Sources */,
 				085218D81EFED5FE0010E992 /* LYProgressHUD.swift in Sources */,

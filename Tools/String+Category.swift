@@ -19,6 +19,7 @@ import UIKit
 
 //
 extension String{
+    
     //手机号识别
     func isMobelPhone() -> Bool {
         if self.characters.count != 11{
@@ -47,5 +48,93 @@ extension String{
         let regrxtest = NSPredicate(format:"SELF MATCHES %@",pattern)
         return regrxtest.evaluate(with: self)
     }
+    
+    func sizeFit(width:CGFloat,height:CGFloat,fontSize:CGFloat) -> CGSize {
+        let lbl = UILabel()
+        lbl.text = self
+        lbl.font = UIFont.systemFont(ofSize: fontSize)
+        lbl.numberOfLines = 0
+        return lbl.sizeThatFits(CGSize.init(width: width, height: height))
+    }
+    
+    
 }
 
+//MARK: - 数值
+extension String{
+    
+    var floatValue : Float {
+        var str = self
+        if str.isEmpty{
+            return 0
+        }
+        str = str.trimmingCharacters(in: .whitespacesAndNewlines)
+        if str.hasPrefix("-"){
+            str.remove(at: str.startIndex)
+            let pattern = "^[0-9]\\d*?\\.?[0-9]*?"
+            let regrxtest = NSPredicate(format:"SELF MATCHES %@",pattern)
+            if regrxtest.evaluate(with: str){
+                return -Float(str)!
+            }
+        }else{
+            let pattern = "^[0-9]\\d*?\\.?[0-9]*?"
+            let regrxtest = NSPredicate(format:"SELF MATCHES %@",pattern)
+            if regrxtest.evaluate(with: str){
+                return Float(str)!
+            }
+        }
+        return 0
+    }
+    
+    var intValue : Int {
+        var str = self
+        if str.isEmpty{
+            return 0
+        }
+        str = str.trimmingCharacters(in: .whitespacesAndNewlines)
+        if str.contains("."){
+            let array = str.components(separatedBy: ".")
+            str = array[0]
+        }
+        if str.hasPrefix("-"){
+            str.remove(at: str.startIndex)
+            let pattern = "^[0-9]\\d*?"
+            let regrxtest = NSPredicate(format:"SELF MATCHES %@",pattern)
+            if regrxtest.evaluate(with: str){
+                return -Int(str)!
+            }
+        }else{
+            let pattern = "^[0-9]\\d*?"
+            let regrxtest = NSPredicate(format:"SELF MATCHES %@",pattern)
+            if regrxtest.evaluate(with: str){
+                return Int(str)!
+            }
+        }
+        return 0
+    }
+    
+    var doubleValue : Double {
+        var str = self
+        if str.isEmpty{
+            return 0
+        }
+        str = str.trimmingCharacters(in: .whitespacesAndNewlines)
+        if str.hasPrefix("-"){
+            str.remove(at: str.startIndex)
+            let pattern = "^[0-9]\\d*?\\.?[0-9]*?"
+            let regrxtest = NSPredicate(format:"SELF MATCHES %@",pattern)
+            if regrxtest.evaluate(with: str){
+                return -Double(str)!
+            }
+        }else{
+            let pattern = "^[0-9]\\d*?\\.?[0-9]*?"
+            let regrxtest = NSPredicate(format:"SELF MATCHES %@",pattern)
+            if regrxtest.evaluate(with: str){
+                return Double(str)!
+            }
+        }
+        return 0
+    }
+    
+    
+}
