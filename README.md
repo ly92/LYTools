@@ -11,7 +11,7 @@ pod 'LYTools', '~>1.0.1'
 
 1.LYPickerView
 
-2.LYAlertView
+2.LYAlertView:http://www.jianshu.com/p/ec70982f2c22
 
 3.LYDatePicker:http://www.jianshu.com/p/6c283b4ce532
 
