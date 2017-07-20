@@ -15,7 +15,7 @@ pod 'LYTools', '~>1.0.1'
 
 3.LYDatePicker:http://www.jianshu.com/p/6c283b4ce532
 
-4.LYBannerView
+4.LYBannerView:http://www.jianshu.com/p/b9e10352be95
 
 5.LYProgressHUD
 
