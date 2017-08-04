@@ -17,7 +17,7 @@ pod 'LYTools', '~>1.0.1'
 
 4.LYBannerView:http://www.jianshu.com/p/b9e10352be95
 
-5.LYProgressHUD
+5.LYProgressHUD：http://www.jianshu.com/p/7641be547fbd
 
 6.LYSwitch
 
